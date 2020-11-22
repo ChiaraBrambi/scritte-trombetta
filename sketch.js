@@ -1,4 +1,4 @@
-let trombaIcon, tscuraIcon, tut1Icon, tut2Icon, logor; //icone
+let trombaIcon, tscuraIcon, tut1Icon, tut2Icon, logor,freccia; //icone
 let xBarra = 20; //lunghezza barra %
 let w, h; //posizione
 let s=0;//ellisse BONUS
@@ -17,9 +17,10 @@ let n_interazione = 0; //var utente usa la trobetta, preme bottone
 function preload() {
   trombaIcon = loadImage("./assets/immagini/trombettaBianca.png"); //trombetta chiara
   tscuraIcon = loadImage("./assets/immagini/tscura.png"); //trombetta chiara
-  tut1Icon = loadImage("./assets/immagini/Trombetta_tut_1.png")//trombetta tutorial 1
-  tut2Icon = loadImage("./assets/immagini/Trombetta_tut_2.gif")//trombetta tutorial 2
-  logor = loadImage("./assets/immagini/logopiccolo.png")//logo ridotto
+  tut1Icon = loadImage("./assets/immagini/Trombetta_tut_1.png");//trombetta tutorial 1
+  tut2Icon = loadImage("./assets/immagini/Trombetta_tut_2.gif");//trombetta tutorial 2
+  logor = loadImage("./assets/immagini/logopiccolo.png");//logo ridotto
+  freccia = loadImage("./assets/immagini/freccia.png");
 }
 
 /////////////////////////////////////////////////////////////////////////
@@ -43,16 +44,16 @@ function draw() {
   textStyle(BOLD);
 
   //testo centrale
-  textSize(20);
-  fill('#877B85'); //4° colore PALETTE
-  text('COOD O1', w, height / 11);
   textSize(16);
+  fill('#877B85'); //4° colore PALETTE
+  text('PARTITA COOD O1', w, height / 11);
   fill('#B7AEB5'); //3° PALETTE
   text('SQUADRA1-SQUADRA2', w, h);
 
   //logo a destra
-
   image(logor, width/11*9.8, height /9,logor.width/4.5,logor.height/4.5);
+  //freccia
+    image(freccia, width/11, height /9,freccia.width/6,freccia.height/6);
   //testo sotto
   textSize(14);
   text('COORDINAZIONE', w-30, h*6.5);
