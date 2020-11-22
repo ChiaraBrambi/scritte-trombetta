@@ -53,7 +53,8 @@ function draw() {
   //logo a destra
   image(logor, width/11*9.8, height /9,logor.width/4.5,logor.height/4.5);
   //freccia
-    image(freccia, width/11, height /9,freccia.width/6,freccia.height/6);
+  image(freccia, width/11, height /9,freccia.width/6,freccia.height/6);
+
   //testo sotto
   textSize(14);
   text('COORDINAZIONE', w-30, h*6.5);
